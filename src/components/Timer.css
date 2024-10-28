@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.circle-bg{
+    fill: none;
+    stroke: #545576;
+}
+
+.circle-prog-bar{
+    fill: none;
+    stroke: #67cb88;
+    transition: 1s;
+}
+
+.timer-wrapper{
+    background: #26273d;
+    border-radius: 25px;
+    width: 400px;
+    height: 490px;
+    margin: 10px;
+    border: solid 1px #414365;
+}
+
+.timer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-text{
+    fill: #a2a4cb;
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100;
+}
+
+.circle-timer-text{
+    fill: #fff;
+    font-size: 52px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100;
+}
+
+.circle-prog-bar.flash {
+    animation: flashColor .5s linear infinite;
+
+}
+
+.timer-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.timer-button{
+    border: solid 2px #606170;
+    border-radius: 100px;
+    height: 38px;
+    width: 80px;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.timer-button:nth-of-type(3){
+    margin-right: 0;
+}
+
+.timer-button:hover{
+    border: solid 2px #67cb88;
+}
+
+.timer-button:disabled:hover{
+    border: solid 2px #606170;
+}
+
+.timer-button:disabled,
+.timer-button[disabled]{
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+@keyframes flashColor {
+    0% {
+        stroke: #cb6767;
+    }
+    50% {
+        stroke: #67cb88;
+    }
+    100% {
+        stroke: #cb6767;
+    }
+}
